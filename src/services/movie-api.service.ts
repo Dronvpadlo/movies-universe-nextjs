@@ -2,8 +2,8 @@ import {genreUrl, moviesUrl, token} from "@/urls/urls";
 import {IMoviesResponse} from "@/models/IMoviesResponse";
 import {IGenreResponse} from "@/models/IGenreResponse";
 
-const getMovies = async ():Promise<IMoviesResponse> => {
-    return await fetch(moviesUrl, {
+const getMovies = async (page: number):Promise<IMoviesResponse> => {
+    return await fetch(moviesUrl + '?page=' + page, {
         method: 'GET',
         headers: {
             Authorization: token

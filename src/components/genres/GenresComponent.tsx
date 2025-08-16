@@ -7,7 +7,7 @@ const GenresComponent = async () => {
     return (
         <div>
             {
-                genres.map((genre, index) => <div>{genre.name}</div>)
+                genres.map((genre, index) => <div key={index}>{genre.name}</div>)
             }
         </div>
     );
