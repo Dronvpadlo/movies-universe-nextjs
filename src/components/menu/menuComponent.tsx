@@ -4,9 +4,9 @@ import Link from "next/link";
 const MenuComponent = () => {
     return (
         <div>
+            <Link href={'/'}>Home</Link> <br/> <hr/>
             <Link href={'/movies'}>Movies</Link> <br/> <hr/>
-            <Link href={'/genres'}>Genres</Link><br/> <hr/>
-            <Link href={'/search'}>Search</Link><br/> <hr/>
+            Search Component
         </div>
     );
 };

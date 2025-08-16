@@ -22,16 +22,19 @@ const getGenres = async ():Promise<IGenreResponse> => {
         .then(value => value.json())
 }
 
-const getPoster = async (path: string):Promise<IGenreResponse> => {
-    return await fetch(genreUrl, {
+const getMoviesByGenreId = async (page: number, genreId: number):Promise<IMoviesResponse> => {
+    return await fetch(moviesUrl + '?page=' + page + '&with_genres=' + genreId, {
         method: 'GET',
         headers: {
             Authorization: token
         }
     })
         .then(value => value.json())
+
 }
 
+
+
 export {
-    getMovies, getGenres
+    getMovies, getGenres, getMoviesByGenreId
 }

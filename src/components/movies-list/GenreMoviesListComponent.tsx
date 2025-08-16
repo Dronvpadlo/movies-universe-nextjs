@@ -1,23 +1,24 @@
 import React, {FC} from 'react';
-import {getMovies} from "@/services/movie-api.service";
+import {getMoviesByGenreId} from "@/services/movie-api.service";
 import MoviesListCardComponent from "@/components/movies-list/MoviesListCardComponent";
 import styles from './MoviesListComponent.module.css'
 
-type MoviesComponentProps = {
+type GenreMoviesComponentProps = {
     page: number
+    genreId: number
 }
 
-const MoviesListComponent:FC<MoviesComponentProps> = async ({page}) => {
-    const response = await getMovies(page);
+const GenreMoviesListComponent:FC<GenreMoviesComponentProps> = async ({page, genreId}) => {
+
+    const response = await getMoviesByGenreId(page, genreId);
     const movies = response.results;
     return (
         <div className={styles.section}>
             {
                 movies.map((movie, index) => <MoviesListCardComponent key={index} movie={movie}/>)
             }
-
         </div>
     );
 };
 
-export default MoviesListComponent;
+export default GenreMoviesListComponent;
