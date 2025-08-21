@@ -6,6 +6,9 @@ import styles from './GenresComponent.module.css'
 const GenresComponent = async () => {
     const response = await getGenres();
     const genres = response.genres
+
+
+
     return (
         <div className={styles.section}>
             {

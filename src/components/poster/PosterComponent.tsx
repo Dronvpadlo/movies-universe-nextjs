@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
-import {IMovieList} from "@/models/IMovieList";
+import {IMovie} from "@/models/IMovie";
 import {posterUrl} from "@/urls/urls";
+import {IMovieDetails} from "@/models/IMovieDetails";
 
 type MovieProps = {
-    movie: IMovieList
+    movie: IMovie | IMovieDetails
 }
 const PosterComponent:FC<MovieProps> = ({movie}) => {
 

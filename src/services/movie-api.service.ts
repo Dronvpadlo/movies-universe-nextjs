@@ -1,6 +1,7 @@
-import {genreUrl, moviesUrl, token} from "@/urls/urls";
+import {genreUrl, movieByIdUrl, moviesUrl, searchMovieUrl, token} from "@/urls/urls";
 import {IMoviesResponse} from "@/models/IMoviesResponse";
 import {IGenreResponse} from "@/models/IGenreResponse";
+import {IMovieDetails} from "@/models/IMovieDetails";
 
 const getMovies = async (page: number):Promise<IMoviesResponse> => {
     return await fetch(moviesUrl + '?page=' + page, {
@@ -33,8 +34,30 @@ const getMoviesByGenreId = async (page: number, genreId: number):Promise<IMovies
 
 }
 
+const searchMovie = async (page: number, query: string):Promise<IMoviesResponse> => {
+    return await fetch(searchMovieUrl + '?query=' + query + '&page=' + page, {
+        method: 'GET',
+        headers: {
+            Authorization: token
+        }
+    })
+
+        .then(value => value.json())
+}
+
+const getMovieById = async (id: number): Promise<IMovieDetails> => {
+    return await fetch(movieByIdUrl + '/' + id, {
+        method: 'GET',
+        headers:{
+            Authorization: token
+        }
+    })
+        .then(value => value.json())
+
+}
+
 
 
 export {
-    getMovies, getGenres, getMoviesByGenreId
+    getMovies, getGenres, getMoviesByGenreId, searchMovie, getMovieById
 }

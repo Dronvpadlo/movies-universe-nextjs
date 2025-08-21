@@ -6,7 +6,6 @@ const MenuComponent = () => {
         <div>
             <Link href={'/'}>Home</Link> <br/> <hr/>
             <Link href={'/movies'}>Movies</Link> <br/> <hr/>
-            Search Component
         </div>
     );
 };

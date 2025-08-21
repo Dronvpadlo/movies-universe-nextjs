@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 import {getGenres} from "@/services/movie-api.service";
-import {IMovieList} from "@/models/IMovieList";
+import {IMovie} from "@/models/IMovie";
 
 type GenreProps = {
-    movie: IMovieList
+    movie: IMovie
 }
 const GenreBadge:FC<GenreProps> = async ({movie}) => {
     const response = await getGenres();

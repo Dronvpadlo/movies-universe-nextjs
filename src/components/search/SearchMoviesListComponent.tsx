@@ -1,18 +1,18 @@
 import React, {FC} from 'react';
-import {getMoviesByGenreId} from "@/services/movie-api.service";
+import {searchMovie} from "@/services/movie-api.service";
+import {IMoviesResponse} from "@/models/IMoviesResponse";
 import MoviesListCardComponent from "@/components/movies-list/MoviesListCardComponent";
-import styles from './MoviesListComponent.module.css'
+import styles from "@/components/movies-list/MoviesListComponent.module.css";
 import PaginationComponent from "@/components/pagination/PaginationComponent";
 
-type GenreMoviesComponentProps = {
+type SearchMoviesProps = {
     page: number,
-    genreId: number
+    query: string
 }
 
-const GenreMoviesListComponent:FC<GenreMoviesComponentProps> = async ({page, genreId}) => {
-
-    const response = await getMoviesByGenreId(page, genreId);
-    const movies = response.results;
+const SearchMoviesListComponent:FC<SearchMoviesProps> = async ({page, query}) => {
+    const response = await searchMovie<IMoviesResponse>(page, query);
+    const movies = response.results
     const totalPages = response.total_pages
     return (
         <div className={styles.section}>
@@ -24,4 +24,4 @@ const GenreMoviesListComponent:FC<GenreMoviesComponentProps> = async ({page, gen
     );
 };
 
-export default GenreMoviesListComponent;
+export default SearchMoviesListComponent;
