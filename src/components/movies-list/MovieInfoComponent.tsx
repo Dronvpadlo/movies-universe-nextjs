@@ -4,6 +4,7 @@ import StarsRating from "@/components/movies-list/StarsRating";
 import {IMovieDetails} from "@/models/IMovieDetails";
 
 
+
 type MovieInfoProps = {
     movie: IMovie | IMovieDetails
 }

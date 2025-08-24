@@ -1,6 +1,7 @@
 'use client'
 import React, {useState} from 'react';
 import {useRouter, useSearchParams} from "next/navigation";
+import styles from './SearchForm.module.css'
 
 const SearchForm = () => {
     const router = useRouter();
@@ -21,10 +22,10 @@ const SearchForm = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" value={search} onChange={(e) => {setSearch(e.target.value)}} placeholder={'type name of movie'}/>
-                <button type={"submit"}>Search Movie</button>
+        <div className={styles.section}>
+            <form className={styles.form} onSubmit={handleSubmit}>
+                <input className={styles.input} type="text" value={search} onChange={(e) => {setSearch(e.target.value)}} placeholder={'type name of movie'}/>
+                <button className={styles.button} type={"submit"}>🔍</button>
             </form>
         </div>
     );

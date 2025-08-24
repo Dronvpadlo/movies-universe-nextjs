@@ -2,28 +2,50 @@ import React, {FC} from 'react';
 import PosterComponent from "@/components/poster/PosterComponent";
 import MovieInfoComponent from "@/components/movies-list/MovieInfoComponent";
 import {IMovieDetails} from "@/models/IMovieDetails";
-
+import styles from './MoviesDetailsComponent.module.css'
+import BigPosterComponent from "@/components/poster/BigPosterComponent";
+import ProductCompanies from "@/components/movies-details/ProductCompanies";
+import ProductionCountriesComponent from "@/components/movies-details/ProductionCountriesComponent";
 
 type MovieProps = {
     movie: IMovieDetails
 }
 const MovieDetailsComponent:FC<MovieProps> = ({movie}) => {
+
+    const posterSize = 'w500/'
+
+
     return (
         <div>
-            <div>
-                <PosterComponent movie={movie}/>
+
+            <div className={styles.highBlock}>
+
+                <div className={styles.poster}>
+                    <PosterComponent posterSize={posterSize} movie={movie}/>
+                </div>
                 <div>
                     <h3>ID: {movie.id}, Title: {movie.title} ({movie.original_title})</h3>
+                    <MovieInfoComponent movie={movie}/>
+                    <div>Overview: {movie.overview}</div>
+                    <a href={movie.homepage}>HomePage</a>
+                    {movie.budget && <div>Budget: {movie.budget}</div>}
+                    <div>Revenue: {movie.revenue}</div>
+                    <div>Runtime: {movie.runtime}</div>
+                    <div>Status: {movie.status}</div>
+                    <div>Tagline: {movie.tagline}</div>
+                    <div>
+                        Companies:{' '}
+                        {movie.production_companies.map((product_company, index) => (
+                            <ProductCompanies key={index} production={product_company}/>
+                        ))}
+                    </div>
+                    <div>
+                        Countries:{' '}
+                        {movie.production_countries.map((production_country, index) => <ProductionCountriesComponent key={index} productCountry={production_country}/>)}
+                    </div>
+
                 </div>
-                <MovieInfoComponent movie={movie}/>
             </div>
-            <div>Overview: {movie.overview}</div>
-            <a href={movie.homepage}>HomePage</a>
-            {movie.budget && <div>Budget: {movie.budget}</div>}
-            <div>Revenue: {movie.revenue}</div>
-            <div>Runtime: {movie.runtime}</div>
-            <div>Status: {movie.status}</div>
-            <div>Tagline: {movie.tagline}</div>
         </div>
     );
 };

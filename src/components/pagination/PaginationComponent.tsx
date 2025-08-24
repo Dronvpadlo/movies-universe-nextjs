@@ -32,9 +32,9 @@ const PaginationComponent:FC<PaginationTypeProp> = ({page, totalPages}) => {
 
                 return offset === 0 ? (
 
-                    <span key={p}>{p}</span>
+                    <span className={styles.span} key={p}>{p}</span>
                 ) : (
-                    <button
+                    <button className={styles.button}
                         key={p}
                         onClick={() => changePage(p)}>
                         {p}

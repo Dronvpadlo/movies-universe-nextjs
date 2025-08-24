@@ -10,12 +10,14 @@ type MovieProps = {
     movie: IMovie
 }
 const MoviesListCardComponent:FC<MovieProps> = ({movie}) => {
+
+    const posterSize = 'w300/'
     return (
         <div className={styles.block}>
-            <Link href={`/movies/${movie.id}`}>
-            <PosterComponent movie={movie}/>
+            <Link className={styles.link} href={`/movies/${movie.id}`}>
+            <PosterComponent posterSize={posterSize} movie={movie}/>
             <div>
-                <h3>ID: {movie.id}, Title: {movie.title} ({movie.original_title})</h3>
+                <h3>{movie.title} ({movie.original_title})</h3>
             </div>
             <MovieInfoComponent movie={movie}/>
             <GenreBadge movie={movie}/>

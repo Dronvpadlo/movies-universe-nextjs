@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {getGenres} from "@/services/movie-api.service";
 import {IMovie} from "@/models/IMovie";
+import styles from './GenreBadge.module.css'
 
 type GenreProps = {
     movie: IMovie
@@ -13,8 +14,8 @@ const GenreBadge:FC<GenreProps> = async ({movie}) => {
         .map(genre => genre.name)
 
     return (
-        <div>
-            Genres: {genresName.map((genre, index) => <div key={index}>{genre} </div>)}
+        <div className={styles.block}>
+            Genres: {genresName.map((genre, index) => <div className={styles.badge} key={index}>{genre} </div>)}
         </div>
     );
 };

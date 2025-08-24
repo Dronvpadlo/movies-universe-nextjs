@@ -1,0 +1,12 @@
+.header {
+    background-color: var(--menu-bg);
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.section{
+    background-color: var(--list-background);
+}

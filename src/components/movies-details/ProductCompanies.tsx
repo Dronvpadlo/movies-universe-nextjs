@@ -1,0 +1,19 @@
+import React, {FC} from 'react';
+import {Production_companies} from "@/models/IMovieDetails";
+import {posterUrl} from "@/urls/urls";
+type ProductCompaniesProps = {
+    production: Production_companies
+}
+
+const ProductCompanies:FC<ProductCompaniesProps> = ({production}) => {
+    const fullLogoPath = posterUrl + '/w154' + production.logo_path;
+    return (
+        <div>
+            <img src={fullLogoPath} alt={production.name}/>
+            <div>Name: {production.name}</div>
+            <div>Original Country: {production.origin_country}</div>
+        </div>
+    );
+};
+
+export default ProductCompanies;

@@ -1,4 +1,22 @@
 .block{
-    height: 95vh;
-    width: 35vh;
+    height: 110vh;
+    width: 37vh;
+    border-radius: 10px;
+    border: var(--borders);
+    margin-top: 1vh;
+    background-color: var(--block);
+}
+
+.block:hover{
+    background-color: var(--block-hover);
+}
+
+.link{
+    text-decoration: none;
+    color: var(--menu-link);
+}
+
+.link:hover{
+    text-decoration: none;
+    color: var(--text);
 }

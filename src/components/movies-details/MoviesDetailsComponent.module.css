@@ -1,0 +1,16 @@
+.highBlock{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.poster{
+    width: 25vw;
+}
+
+.backdrop{
+    height: 15vh;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}

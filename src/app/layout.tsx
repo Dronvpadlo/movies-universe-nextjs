@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import MenuComponent from "@/components/menu/menuComponent";
-
+import {ThemeProvider} from "next-themes";
 
 export const metadata: Metadata = {
   title: "Movies Universe V2 NextJS",
@@ -15,9 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-      <MenuComponent/>
+      <body className={"body"}>
+
+
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <MenuComponent/>
         {children}
+      </ThemeProvider>
       </body>
     </html>
   );
