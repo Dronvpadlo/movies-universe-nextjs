@@ -9,7 +9,7 @@ const ProductCompanies:FC<ProductCompaniesProps> = ({production}) => {
     const fullLogoPath = posterUrl + '/w154' + production.logo_path;
     return (
         <div>
-            <img src={fullLogoPath} alt={production.name}/>
+            {production.logo_path && <img src={fullLogoPath} alt={production.name}/>}
             <div>Name: {production.name}</div>
             <div>Original Country: {production.origin_country}</div>
         </div>

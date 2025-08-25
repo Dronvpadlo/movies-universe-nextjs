@@ -1,0 +1,14 @@
+.button{
+    background-color: var(--block);
+    height: 4vh;
+    border-radius: 20px;
+    border: solid black;
+    position: fixed;
+    box-shadow: 0 4px 6px var(--block-hover);
+    margin-top: 1vh;
+}
+
+.button:hover{
+    background-color: var(--block-hover);
+    box-shadow: 0 4px 6px var(--block-hover);
+}

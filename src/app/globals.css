@@ -1,5 +1,5 @@
 .body{
-    font-family: "Playfair Display", serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     margin: 0;
@@ -24,23 +24,26 @@ button {
 }
 
 html.light {
-    --menu-bg: #ffb169;
+    --menu-bg: #a8a7a5;
     --list-background: #e8e8e8;
     --menu-link: black;
     --menu-link-hover: blueviolet;
-    --borders: solid 2px #c4f5b0;
+    --borders: solid 2px #f88323;
     --text: black;
     --block-hover: #ffb169;
-    --block: #656464;
+    --block: #e7e4e4;
+    --shadows: #9d8f09;
+
 }
 
 html.dark {
     --menu-bg: #222;
-    --list-background: #656464;
-    --menu-link: #ffb169;
+    --list-background: #4b4a4a;
+    --menu-link: #ffffff;
     --menu-link-hover: #19bdfc;
-    --borders: solid 2px #4a80f6;
-    --block-hover: #ffb169;
+    --borders: solid 2px #a94af6;
+    --block-hover: #6313ab;
     --text: #000000;
     --block: #222;
+    --shadows: #4a80f6;
 }

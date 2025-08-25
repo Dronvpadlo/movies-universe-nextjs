@@ -5,8 +5,21 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    position: fixed;
+    margin-top: 7.5vh;
+    z-index: 1000;
 }
 
 .section{
     background-color: var(--list-background);
+    display: flex;
+    justify-content: center;
+    padding-top: 22.5vh;
+}
+
+.block{
+    margin-top: 2vh;
+    width: 90%;
+    background-color: var(--menu-bg);
+    border-radius: 25px;
 }

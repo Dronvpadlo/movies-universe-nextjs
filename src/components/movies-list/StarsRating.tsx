@@ -12,8 +12,8 @@ const StarsRating:FC<RatingProps> = ({rating}) => {
                 rating={rating / 2}
                 starRatedColor="gold"
                 numberOfStars={5}
-                starDimension="20px"
-                starSpacing="2px"
+                starDimension="2vw"
+                starSpacing="0.3vw"
                 name="movie-rating"
             />
 

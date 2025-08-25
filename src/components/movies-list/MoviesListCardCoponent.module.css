@@ -3,8 +3,9 @@
     width: 37vh;
     border-radius: 10px;
     border: var(--borders);
-    margin-top: 1vh;
+    margin-top: 3vh;
     background-color: var(--block);
+    box-shadow: 0 4px 6px var(--block-hover);
 }
 
 .block:hover{

@@ -20,7 +20,8 @@ export default async function MoviesPage ({searchParams}: MoviesPageProps) {
             <GenresComponent/>
             <SearchForm/>
             </div>
-            <div className={styles.section}>{
+            <div className={styles.section}>
+                <div className={styles.block}>{
                 query ? (
                     <SearchMoviesListComponent page={page} query={query}/>
                     ) : genre ? (
@@ -28,7 +29,8 @@ export default async function MoviesPage ({searchParams}: MoviesPageProps) {
                     ) : (
                         <MoviesListComponent page={page} />
                     )
-            }
+                }
+                </div>
             </div>
         </div>
     );

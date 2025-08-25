@@ -5,14 +5,15 @@
     border: solid black 1px;;
     font-size: 2vh;
     color: var(--menu-link);
+    box-shadow: 0 4px 6px var(--block-hover);
 }
 
 .button:hover{
-    background-color: #53c0f3;
+    background-color: var(--block-hover);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .button:disabled{
-    border-radius: 50%;
-    background-color: #f19090;
+    border-radius: 15px;
+    background-color: var(--block-hover);
 }

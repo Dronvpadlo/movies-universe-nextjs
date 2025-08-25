@@ -10,6 +10,8 @@
     font-style: normal;
     background-color: var(--menu-bg);
     color: var(--menu-link);
+    position: fixed;
+    z-index: 1000;
 }
 
 .link,
@@ -21,10 +23,11 @@
     font-optical-sizing: auto;
     font-style: normal;
     padding: 2vh;
+
 }
 
 .link:hover{
-    color: var(--menu-link-hover);
+    color: var(--block-hover);
 }
 
 .button{
@@ -34,4 +37,5 @@
     border: solid black 1px;;
     font-size: 3vh;
     color: var(--menu-link);
+    box-shadow: 0 4px 6px var(--block-hover);
 }
