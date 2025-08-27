@@ -28,7 +28,7 @@ const MovieDetailsComponent:FC<MovieProps> = ({movie}) => {
                 <MovieInfoComponent movie={movie}/>
                 <div>Overview: {movie.overview}</div>
                 <a href={movie.homepage}>HomePage</a>
-                {movie.budget && <div>Budget: {movie.budget}</div>}
+                <div>Budget: {movie.budget}</div>
                 <div>Revenue: {movie.revenue}</div>
                 <div>Runtime: {movie.runtime}</div>
                 <div>Status: {movie.status}</div>
