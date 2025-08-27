@@ -7,6 +7,7 @@ import styles from './MoviesDetailsComponent.module.css'
 import ProductCompanies from "@/components/movies-details/ProductCompanies";
 import ProductionCountriesComponent from "@/components/movies-details/ProductionCountriesComponent";
 import BackButton from "@/components/movies-details/BackButton";
+import GenreBadge from "@/components/movies-list/GenreBadge";
 
 type MovieProps = {
     movie: IMovieDetails
@@ -33,6 +34,7 @@ const MovieDetailsComponent:FC<MovieProps> = ({movie}) => {
                 <div>Runtime: {movie.runtime}</div>
                 <div>Status: {movie.status}</div>
                 <div>Tagline: {movie.tagline}</div>
+                <div><GenreBadge movie={movie}/></div>
                 <div>
                     Companies:{' '}
                     {movie.production_companies.map((product_company, index) => (

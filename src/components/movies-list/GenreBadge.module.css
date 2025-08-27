@@ -1,8 +1,9 @@
 .badge{
-    background-color: #505050;
-    color: white;
-    border-radius: 5px;
-    width: 5vw;
+    background-color: var(--block-hover);
+    color: var(--menu-link);
+    border-radius: 25px;
+    border: solid 2px black;
+    width: 7vw;
     margin-left: 2px;
     height: 5vh;
     display: flex;
@@ -10,6 +11,7 @@
     align-items: center;
     margin-bottom: 2px;
     flex-wrap: wrap;
+    box-shadow: 0 4px 6px var(--block-hover);
 }
 
 .block{
