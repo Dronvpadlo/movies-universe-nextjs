@@ -6,7 +6,7 @@ import {usePathname, useRouter, useSearchParams} from "next/navigation";
 
 type PaginationTypeProp = {
     page: number
-    totalPages: number | undefined
+    totalPages: number
 }
 const PaginationComponent:FC<PaginationTypeProp> = ({page, totalPages}) => {
 
@@ -15,9 +15,8 @@ const PaginationComponent:FC<PaginationTypeProp> = ({page, totalPages}) => {
     const params = useSearchParams();
 
     const neighbors = [-4, -3, -2, -1, 0, 1, 2, 3, 4];
-    const maxPage = totalPages;
     const changePage = (p: number) => {
-        if (p < 1 || p > maxPage) return;
+        if (p < 1 || p > totalPages) return;
             const nextParams = new URLSearchParams(params.toString());
             nextParams.set('page', String(p));
             router.push(`${pathname}?${nextParams.toString()}`);
@@ -28,7 +27,7 @@ const PaginationComponent:FC<PaginationTypeProp> = ({page, totalPages}) => {
         <div className={styles.section}>
             {neighbors.map((offset) => {
                 const p = page + offset;
-                if (p < 1 || p > maxPage) return null;
+                if (p < 1 || p > totalPages) return null;
 
                 return offset === 0 ? (
 

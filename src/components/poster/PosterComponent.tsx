@@ -10,10 +10,13 @@ type MovieProps = {
 }
 const PosterComponent:FC<MovieProps> = ({movie, posterSize}) => {
 
-
+    const noPoster = '/noPoster.jpg'
     return (
+
         <div className={styles.block} >
-            <img className={styles.poster} src={posterUrl+ posterSize + movie.poster_path} alt={movie.title}/>
+            {movie.poster_path?
+                (<img className={styles.poster} src={posterUrl + posterSize + movie.poster_path} alt={movie.title}/>):
+            (<img className={styles.noPhoto} src={noPoster} alt={movie.title}/>)}
         </div>
     );
 };

@@ -3,4 +3,30 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 60vh;
+}
+
+.notFoundSection{
+    padding-left: 4vw;
+    min-height: 60vh;
+    font-size: 2vw;
+}
+
+.query{
+    color: var(--block-hover);
+}
+
+.link{
+    color: var(--list-background);
+    text-decoration: none;
+    font-size: 5vh;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 2vh;
+
+}
+
+.link:hover{
+    color: var(--block-hover);
 }

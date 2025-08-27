@@ -8,7 +8,8 @@ const getMovies = async (page: number):Promise<IMoviesResponse> => {
         method: 'GET',
         headers: {
             Authorization: token
-        }
+        },
+        next: {revalidate: 3600}
     })
         .then(value => value.json())
 
@@ -18,7 +19,8 @@ const getGenres = async ():Promise<IGenreResponse> => {
         method: 'GET',
         headers: {
             Authorization: token
-        }
+        },
+        next: {revalidate: 86400}
     })
         .then(value => value.json())
 }
@@ -28,7 +30,8 @@ const getMoviesByGenreId = async (page: number, genreId: number):Promise<IMovies
         method: 'GET',
         headers: {
             Authorization: token
-        }
+        },
+        next: {revalidate: 3600}
     })
         .then(value => value.json())
 
@@ -39,7 +42,8 @@ const searchMovie = async (page: number, query: string):Promise<IMoviesResponse>
         method: 'GET',
         headers: {
             Authorization: token
-        }
+        },
+        cache: "no-cache"
     })
 
         .then(value => value.json())
@@ -50,7 +54,8 @@ const getMovieById = async (id: number): Promise<IMovieDetails> => {
         method: 'GET',
         headers:{
             Authorization: token
-        }
+        },
+        next: {revalidate: 86400}
     })
         .then(value => value.json())
 

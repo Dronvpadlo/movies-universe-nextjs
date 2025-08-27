@@ -10,7 +10,7 @@ type MoviesPageProps = {
     searchParams: {page?: string, genre?: string, query?: string}
 }
 export default async function MoviesPage ({searchParams}: MoviesPageProps) {
-    const page = Number( await searchParams.page) || 1
+    const page = Number(searchParams.page) || 1
     const genre = searchParams.genre ? Number(searchParams.genre) : undefined;
     const query = searchParams.query || undefined
 

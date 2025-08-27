@@ -10,3 +10,12 @@
     display: flex;
     justify-content: center;
 }
+
+.noPhoto{
+    border-radius: 10px;
+    width: 100%;
+    height: 56vh;
+    max-width: 35vw;
+    object-fit: cover;
+    display: block;
+}

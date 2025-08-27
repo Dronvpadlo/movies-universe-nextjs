@@ -29,7 +29,6 @@ html.light {
     --menu-link: black;
     --menu-link-hover: blueviolet;
     --borders: solid 2px #f88323;
-    --text: black;
     --block-hover: #ffb169;
     --block: #e7e4e4;
     --shadows: #9d8f09;
@@ -43,7 +42,6 @@ html.dark {
     --menu-link-hover: #19bdfc;
     --borders: solid 2px #a94af6;
     --block-hover: #6313ab;
-    --text: #000000;
     --block: #222;
     --shadows: #4a80f6;
 }
