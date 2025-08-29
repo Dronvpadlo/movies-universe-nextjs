@@ -7,7 +7,7 @@ import styles from './MoviesDetailsComponent.module.css'
 import ProductionCompaniesComponent from "@/components/movies-details/ProductionCompaniesComponent";
 import ProductionCountriesComponent from "@/components/movies-details/ProductionCountriesComponent";
 import BackButton from "@/components/movies-details/BackButton";
-import GenreBadge from "@/components/movies-list/GenreBadge";
+import GenreBadge from "@/components/genres/GenreBadge";
 
 type MovieProps = {
     movie: IMovieDetails

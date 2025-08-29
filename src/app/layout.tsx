@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import MenuComponent from "@/components/menu/menuComponent";
+import MenuComponent from "@/components/menu/MenuComponent";
 import {ThemeProvider} from "next-themes";
 import Footer from "@/components/footer/Footer";
 

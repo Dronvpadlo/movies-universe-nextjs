@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {IMovie} from "@/models/IMovie";
 import PosterComponent from "@/components/poster/PosterComponent";
-import GenreBadge from "@/components/movies-list/GenreBadge";
+import GenreBadge from "@/components/genres/GenreBadge";
 import MovieInfoComponent from "@/components/movies-list/MovieInfoComponent";
 import styles from './MoviesListCardCoponent.module.css'
 import Link from "next/link";
