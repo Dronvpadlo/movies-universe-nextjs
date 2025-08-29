@@ -18,4 +18,12 @@
     width: 65vw;
 }
 
+.link{
+    text-decoration: none;
+    color: var(--menu-link);
+}
+
+.link:hover{
+    color: var(--block-hover)
+}
 

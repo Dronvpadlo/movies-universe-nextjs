@@ -12,7 +12,7 @@ type SearchMoviesProps = {
 }
 
 const SearchMoviesListComponent:FC<SearchMoviesProps> = async ({page, query}) => {
-    const response = await searchMovie<IMoviesResponse>(page, query);
+    const response = await searchMovie(page, query);
     const movies = response.results
     const totalPages = response.total_pages
 

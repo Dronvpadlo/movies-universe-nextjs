@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
     return (
         <div className={styles.section}>
-               <Link className={styles.link} href={'/movies'}>Welcome to my movies Universe NextJS Version</Link>
+               <Link className={styles.link} href={'/movies'}>Welcome to my Movies Universe 🎬 NextJS Version</Link>
 
         </div>
     );

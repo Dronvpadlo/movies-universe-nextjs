@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 93vh;
     font-size: 8vh;
     background-color: var(--list-background);
 }

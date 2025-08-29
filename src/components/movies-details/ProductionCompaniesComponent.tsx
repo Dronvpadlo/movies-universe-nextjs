@@ -5,7 +5,7 @@ type ProductCompaniesProps = {
     production: Production_companies
 }
 
-const ProductCompanies:FC<ProductCompaniesProps> = ({production}) => {
+const ProductionCompaniesComponent:FC<ProductCompaniesProps> = ({production}) => {
     const fullLogoPath = posterUrl + '/w154' + production.logo_path;
     return (
         <div>
@@ -16,4 +16,4 @@ const ProductCompanies:FC<ProductCompaniesProps> = ({production}) => {
     );
 };
 
-export default ProductCompanies;
+export default ProductionCompaniesComponent;

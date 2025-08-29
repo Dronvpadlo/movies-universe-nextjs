@@ -4,7 +4,7 @@ import PosterComponent from "@/components/poster/PosterComponent";
 import MovieInfoComponent from "@/components/movies-list/MovieInfoComponent";
 import {IMovieDetails} from "@/models/IMovieDetails";
 import styles from './MoviesDetailsComponent.module.css'
-import ProductCompanies from "@/components/movies-details/ProductCompanies";
+import ProductionCompaniesComponent from "@/components/movies-details/ProductionCompaniesComponent";
 import ProductionCountriesComponent from "@/components/movies-details/ProductionCountriesComponent";
 import BackButton from "@/components/movies-details/BackButton";
 import GenreBadge from "@/components/movies-list/GenreBadge";
@@ -28,7 +28,7 @@ const MovieDetailsComponent:FC<MovieProps> = ({movie}) => {
                 <h3>ID: {movie.id}, Title: {movie.title} ({movie.original_title})</h3>
                 <MovieInfoComponent movie={movie}/>
                 <div>Overview: {movie.overview}</div>
-                <a href={movie.homepage}>HomePage</a>
+                <a className={styles.link} href={movie.homepage}>🌐 Home Page</a>
                 <div>Budget: {movie.budget}</div>
                 <div>Revenue: {movie.revenue}</div>
                 <div>Runtime: {movie.runtime}</div>
@@ -38,7 +38,7 @@ const MovieDetailsComponent:FC<MovieProps> = ({movie}) => {
                 <div>
                     Companies:{' '}
                     {movie.production_companies.map((product_company, index) => (
-                        <ProductCompanies key={index} production={product_company}/>
+                        <ProductionCompaniesComponent key={index} production={product_company}/>
                     ))}
                 </div>
                 <div>

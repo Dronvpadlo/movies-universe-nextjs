@@ -7,7 +7,7 @@ type ProductCountryProp = {
 const ProductionCountriesComponent:FC<ProductCountryProp> = ({productCountry}) => {
     return (
         <div>
-            <div>Name: {productCountry.name} {productCountry.iso_3166_1}</div>
+            <div>{productCountry.name} {productCountry.iso_3166_1}</div>
         </div>
     );
 };

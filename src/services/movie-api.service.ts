@@ -55,7 +55,6 @@ const getMovieById = async (id: number): Promise<IMovieDetails> => {
         headers:{
             Authorization: token
         },
-        next: {revalidate: 86400}
     })
         .then(value => value.json())
 

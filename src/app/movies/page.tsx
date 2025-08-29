@@ -7,12 +7,13 @@ import SearchForm from "@/components/search/SearchForm";
 import styles from './MoviesPage.module.css'
 
 type MoviesPageProps = {
-    searchParams: {page?: string, genre?: string, query?: string}
+    searchParams: Promise<{page: string, genre?: string, query?: string}>
 }
 export default async function MoviesPage ({searchParams}: MoviesPageProps) {
-    const page = Number(searchParams.page) || 1
-    const genre = searchParams.genre ? Number(searchParams.genre) : undefined;
-    const query = searchParams.query || undefined
+    const resolvedSearchParams = await searchParams
+    const page = Number(resolvedSearchParams.page) || 1
+    const genre = resolvedSearchParams.genre ? Number(resolvedSearchParams.genre) : undefined;
+    const query = resolvedSearchParams.query || undefined
 
     return (
         <div>
